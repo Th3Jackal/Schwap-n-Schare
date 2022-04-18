@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditScheduleController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c2340" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Label layoutX="211.0" layoutY="14.0" text="Edit Schedule" textFill="#f15a22">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TableView layoutX="21.0" layoutY="100.0" prefHeight="200.0" prefWidth="560.0">
+         <columns>
+            <TableColumn text="Sun" />
+            <TableColumn text="Mon" />
+            <TableColumn text="Tues" />
+            <TableColumn text="Wed" />
+            <TableColumn text="Thurs" />
+            <TableColumn text="Fri" />
+            <TableColumn text="Sat" />
+         </columns>
+      </TableView>
+      <Button layoutX="533.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToMain" text="Menu" />
+   </children>
+</AnchorPane>
