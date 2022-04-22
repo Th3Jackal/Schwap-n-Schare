@@ -20,7 +20,7 @@
          <graphic>
             <ImageView fitHeight="75.0" fitWidth="75.0" onMouseClicked="#switchToEdit">
                <image>
-                  <Image url="file:/C:/Users/albas/eclipse-workspace/Schwap%20N%20Schare/src/edit-new-icon-22.png" />
+                  <Image url="@../edit-new-icon-22.png" />
                </image>
             </ImageView>
          </graphic>
@@ -29,7 +29,7 @@
          <graphic>
             <ImageView fitHeight="75.0" fitWidth="75.0" onMouseClicked="#switchToCompare">
                <image>
-                  <Image url="file:/C:/Users/albas/eclipse-workspace/Schwap%20N%20Schare/src/compare-icon-11.png" />
+                  <Image url="@../compare-icon-11.png" />
                </image>
             </ImageView>
          </graphic>
@@ -38,7 +38,7 @@
          <graphic>
             <ImageView fitHeight="75.0" fitWidth="75.0" onMouseClicked="#switchToProfile">
                <image>
-                  <Image url="file:/C:/Users/albas/eclipse-workspace/Schwap%20N%20Schare/src/Sample_User_Icon.png" />
+                  <Image url="@../Sample_User_Icon.png" />
                </image>
             </ImageView>
          </graphic>
@@ -47,7 +47,7 @@
          <graphic>
             <ImageView fitHeight="75.0" fitWidth="75.0" onMouseClicked="#switchToSettings">
                <image>
-                  <Image url="file:/C:/Users/albas/eclipse-workspace/Schwap%20N%20Schare/src/126472.png" />
+                  <Image url="@../126472.png" />
                </image>
             </ImageView>
          </graphic>
@@ -74,7 +74,7 @@
       </Label>
       <ImageView fitHeight="90.0" fitWidth="200.0" layoutX="196.0" layoutY="28.0">
          <image>
-            <Image url="file:/C:/Users/albas/eclipse-workspace/Schwap%20N%20Schare/src/university-of-texas-at-san-antonio-logo.png" />
+            <Image url="@../university-of-texas-at-san-antonio-logo.png" />
          </image>
       </ImageView>
    </children>
