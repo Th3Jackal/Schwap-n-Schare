@@ -43,7 +43,6 @@ public class EditScheduleController {
 		double width = gc.getCanvas().getWidth();
 		double height = gc.getCanvas().getHeight();
 		double columnWidth = width/7;
-		String[] days = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 		gc.setFill(Color.WHITE);
 		gc.fillRect(0, 0, width, height);
 		gc.setFill(Color.BLACK);
@@ -52,9 +51,9 @@ public class EditScheduleController {
 		for(int i=0; i<7; i++) {
 			gc.strokeLine(columnWidth*i,0, columnWidth*i, height);
 			gc.setFont(Font.font("Sans Serif", columnWidth*.15));
-			gc.fillText(days[i], 2+i*columnWidth, columnWidth*.19);
+			gc.fillText(ScheduleDate.days[i], 2+i*columnWidth, columnWidth*.19);
 			gc.setFont(Font.font("Sans Serif", columnWidth*.12));
-			gc.fillText(days[i], 2+i*columnWidth, columnWidth*.39);
+			gc.fillText(ScheduleDate.days[i], 2+i*columnWidth, columnWidth*.39);
 			for(ScheduleEvent se : schedule.getEvents(i)) {
 				double eheight = columnWidth*.19+(height - columnWidth*.19)*(double)(se.getDate().getRealTime())/86400.0;
 				gc.fillText(se.getLocation(), 2+i*columnWidth, eheight);
