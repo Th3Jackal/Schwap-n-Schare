@@ -2,7 +2,7 @@ package application;
 
 public class ScheduleDate {
 	private int day,hour,minute,second;
-	
+	public static String[] days = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 	public ScheduleDate(int day, int hour, int minute, int second) {
 		setScheduleDate(day,hour,minute,second);
 	}
