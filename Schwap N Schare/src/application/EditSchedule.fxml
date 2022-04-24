@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.canvas.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.web.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
+
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditScheduleController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c2340" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Button layoutX="540.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToMain" text="Menu" />
       <Label layoutX="211.0" layoutY="14.0" text="Edit Schedule" textFill="#f15a22">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Button layoutX="533.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToMain" text="Menu" />
-      <Canvas fx:id="canvas" height="304.0" layoutX="12.0" layoutY="48.0" width="577.0" />
+      <TextField layoutX="226.0" layoutY="99.0" />
+      <TextField layoutX="226.0" layoutY="174.0" />
+      <TextField layoutX="226.0" layoutY="247.0" />
+      <Label layoutX="288.0" layoutY="130.0" text="Day" textFill="#f15a22">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="284.0" layoutY="205.0" text="Time" textFill="#f15a22">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="276.0" layoutY="278.0" text="Activity" textFill="#f15a22">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="260.0" layoutY="317.0" mnemonicParsing="false" text="Add Activity" />
+      <Button layoutX="250.0" layoutY="354.0" mnemonicParsing="false" text="Remove Activity" />
    </children>
 </AnchorPane>

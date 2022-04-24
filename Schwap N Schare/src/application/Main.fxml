@@ -16,7 +16,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button contentDisplay="GRAPHIC_ONLY" layoutX="47.0" layoutY="206.0" mnemonicParsing="false" onAction="#switchToEdit" text="Button">
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="206.0" mnemonicParsing="false" onAction="#switchToEdit" text="Button">
          <graphic>
             <ImageView fitHeight="75.0" fitWidth="75.0" onMouseClicked="#switchToEdit">
                <image>
@@ -25,7 +25,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button contentDisplay="GRAPHIC_ONLY" layoutX="188.0" layoutY="206.0" mnemonicParsing="false" onAction="#switchToCompare" text="Button">
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="132.0" layoutY="206.0" mnemonicParsing="false" onAction="#switchToCompare" text="Button">
          <graphic>
             <ImageView fitHeight="75.0" fitWidth="75.0" onMouseClicked="#switchToCompare">
                <image>
@@ -34,7 +34,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button contentDisplay="GRAPHIC_ONLY" layoutX="329.0" layoutY="206.0" mnemonicParsing="false" onAction="#switchToProfile" text="Button">
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="376.0" layoutY="206.0" mnemonicParsing="false" onAction="#switchToProfile" text="Button">
          <graphic>
             <ImageView fitHeight="75.0" fitWidth="75.0" onMouseClicked="#switchToProfile">
                <image>
@@ -43,7 +43,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button contentDisplay="GRAPHIC_ONLY" layoutX="470.0" layoutY="206.0" mnemonicParsing="false" onAction="#switchToSettings" text="Button">
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="495.0" layoutY="206.0" mnemonicParsing="false" onAction="#switchToSettings" text="Button">
          <graphic>
             <ImageView fitHeight="75.0" fitWidth="75.0" onMouseClicked="#switchToSettings">
                <image>
@@ -52,22 +52,22 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="48.0" layoutY="303.0" text="Edit Schedule" textFill="#f15a22">
+      <Label layoutX="15.0" layoutY="303.0" text="Edit Schedule" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="171.0" layoutY="303.0" text="Compare Schedule" textFill="#f15a22">
+      <Label layoutX="115.0" layoutY="303.0" text="Compare Schedule" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="353.0" layoutY="303.0" text="Profile" textFill="#f15a22">
+      <Label layoutX="400.0" layoutY="303.0" text="Profile" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="489.0" layoutY="303.0" text="Settings" textFill="#f15a22">
+      <Label layoutX="514.0" layoutY="303.0" text="Settings" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
@@ -77,5 +77,19 @@
             <Image url="@../university-of-texas-at-san-antonio-logo.png" />
          </image>
       </ImageView>
+      <Label layoutX="252.0" layoutY="303.0" text="View Schedule" textFill="#f15a22">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="254.0" layoutY="206.0" mnemonicParsing="false" onAction="#switchToView" text="Button">
+         <graphic>
+            <ImageView fitHeight="75.0" fitWidth="75.0" onMouseClicked="#switchToView">
+               <image>
+                  <Image url="@../view-icon-png-14.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

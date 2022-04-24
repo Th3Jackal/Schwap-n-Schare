@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-import javafx.scene.text.Font;
-
 public class Schedule {
 	private ArrayList<ScheduleEvent>[] data;
 	public Schedule() {
