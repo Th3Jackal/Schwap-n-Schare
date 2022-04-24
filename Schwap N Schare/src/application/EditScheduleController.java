@@ -55,7 +55,7 @@ public class EditScheduleController {
 			gc.setFont(Font.font("Sans Serif", columnWidth*.12));
 			gc.fillText(ScheduleDate.days[i], 2+i*columnWidth, columnWidth*.39);
 			for(ScheduleEvent se : schedule.getEvents(i)) {
-				double eheight = columnWidth*.19+(height - columnWidth*.19)*(double)(se.getDate().getRealTime())/86400.0;
+				double eheight = columnWidth*.18+(height - columnWidth*.19)*(double)(se.getDate().getRealTime())/86400.0;
 				gc.fillText(se.getLocation(), 2+i*columnWidth, eheight);
 			}
 		}
