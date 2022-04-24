@@ -64,7 +64,10 @@ public class ScheduleDate {
 		sc.close();
 	}
 	public String toString() {	
-		return days[day]+" "+Integer.toString(hour)+":"+Integer.toString(minute)+":"+Integer.toString(second);
+		return days[day]+" "+String.format("%02d", hour)+":"+String.format("%02d", minute)+":"+String.format("%02d", second);
+	}
+	public String getTime() {	
+		return String.format("%02d", hour)+":"+String.format("%02d", minute)+":"+String.format("%02d", second);
 	}
 	public int compareTo(ScheduleDate date) {
 		return Integer.compare(this.getRealTime(),date.getRealTime());
