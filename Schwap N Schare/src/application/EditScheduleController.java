@@ -22,5 +22,9 @@ public class EditScheduleController {
 		stage.setScene(scene);
 		stage.show();
 	}
+	
+	public void addActivity(ActionEvent event) throws IOException {
+		
+	}
 
 }
