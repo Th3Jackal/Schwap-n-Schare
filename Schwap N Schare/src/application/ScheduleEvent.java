@@ -1,6 +1,7 @@
 package application;
 
 public class ScheduleEvent implements Comparable<ScheduleEvent>{
+//variables for the user's input event details declared 
 	private String name;
 	private ScheduleDate date;
 	private String location;
