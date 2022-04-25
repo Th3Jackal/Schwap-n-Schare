@@ -30,14 +30,10 @@ public class ViewScheduleController {
 	}
 	
 	public void draw(GraphicsContext gc) {
+		if (Main.schedule1 == null)
+			Main.schedule1 = new Schedule();
 		
-		Schedule schedule = new Schedule();
-		schedule.addEvent("Assiewgvewrhrtbhieurhigiwerhgnment 4", 3, 16, 12, 5, "NPB 1.28");
-		schedule.addEvent("Test", 6, 23, 59, 59, "Times Square");
-		schedule.addEvent("Test", 6, 0, 0, 0, "Square");
-		schedule.addEvent("01234567890...", 0, 5, 00, 00, "Mckinley Hall");
-		schedule.addEvent("0123456789012345678901234567890123456789", 5, 13, 15, 00, "NPB wegfw0-eig09iwe09igh009weigf091.28");
-		
+		Main.schedule1.readFromFile("schedule.txt");
 		//width 577
 		//height 304
 		//column width 82.4285714286
@@ -52,7 +48,7 @@ public class ViewScheduleController {
 			gc.setFont(Font.font("Sans Serif", 12.3642857143));
 			gc.fillText(ScheduleDate.days[i], 2+i*82.42857142857143, 82.42857142857143*.19);
 			gc.setFont(Font.font("Sans Serif", 9.89142857143));
-			for(ScheduleEvent se : schedule.getEvents(i)) {
+			for(ScheduleEvent se : Main.schedule1.getEvents(i)) {
 				double eheight = 32.1471428571+243*(double)(se.getDate().getRealTime())/86400.0;
 				String name=se.getName(),date=se.getDate().getTime(),location=se.getLocation();
 				if(name.length() > 13)
