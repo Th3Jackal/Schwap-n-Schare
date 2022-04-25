@@ -15,8 +15,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class CompareScheduleController {
-	
+public class CompareScheduleController { 
+//initialize for schedule compare page 	
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
