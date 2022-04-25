@@ -17,7 +17,8 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class EditScheduleController {
-	
+//initialize for schedule edit page
+//add and delete functions for each schedule activities defined 
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
