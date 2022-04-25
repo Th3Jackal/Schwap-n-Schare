@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
+	public static Schedule schedule1,schedule2;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
