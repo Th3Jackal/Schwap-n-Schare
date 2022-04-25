@@ -32,11 +32,11 @@ public class ViewScheduleController {
 	public void draw(GraphicsContext gc) {
 		
 		Schedule schedule = new Schedule();
-		schedule.addEvent("Assignment 4", 3, 16, 12, 5, "NPB 1.28");
+		schedule.addEvent("Assiewgvewrhrtbhieurhigiwerhgnment 4", 3, 16, 12, 5, "NPB 1.28");
 		schedule.addEvent("Test", 6, 23, 59, 59, "Times Square");
 		schedule.addEvent("Test", 6, 0, 0, 0, "Square");
-		schedule.addEvent("Group Project", 0, 5, 00, 00, "Mckinley Hall");
-		schedule.addEvent("Counselor appointment", 5, 13, 15, 00, "NPB 1.28");
+		schedule.addEvent("01234567890...", 0, 5, 00, 00, "Mckinley Hall");
+		schedule.addEvent("0123456789012345678901234567890123456789", 5, 13, 15, 00, "NPB wegfw0-eig09iwe09igh009weigf091.28");
 		
 		//width 577
 		//height 304
@@ -53,10 +53,15 @@ public class ViewScheduleController {
 			gc.fillText(ScheduleDate.days[i], 2+i*82.42857142857143, 82.42857142857143*.19);
 			gc.setFont(Font.font("Sans Serif", 9.89142857143));
 			for(ScheduleEvent se : schedule.getEvents(i)) {
-				double eheight = 82.42857142857143*.39+236.338571429*(double)(se.getDate().getRealTime())/86400.0;
-				gc.fillText(se.getName(), 2+i*82.42857142857143, eheight);
-				gc.fillText(se.getDate().getTime(), 2+i*82.42857142857143, eheight+13);
-				gc.fillText(se.getLocation(), 2+i*82.42857142857143, eheight+26);
+				double eheight = 32.1471428571+243*(double)(se.getDate().getRealTime())/86400.0;
+				String name=se.getName(),date=se.getDate().getTime(),location=se.getLocation();
+				if(name.length() > 13)
+					name=name.substring(0,11)+"...";
+				if(location.length() > 13)
+					location=location.substring(0,11)+"...";
+				gc.fillText(name, 2+i*82.42857142857143, eheight);
+				gc.fillText(date, 2+i*82.42857142857143, eheight+13);
+				gc.fillText(location,2+i*82.42857142857143, eheight+26);
 			}
 		}
 		
