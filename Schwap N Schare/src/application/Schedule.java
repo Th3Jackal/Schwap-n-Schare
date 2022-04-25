@@ -1,6 +1,7 @@
 package application;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,12 +48,12 @@ public class Schedule {
 	public void writeToFile(String filename) {
 		try {
 			File file = new File(System.getProperty("user.dir") +"/"+ filename);
-			PrintWriter writer = new PrintWriter(file);
+			FileWriter writer = new FileWriter(file);
 			for(int i=0; i<7; i++) {
 				for(ScheduleEvent se : getEvents(i)) {
-					writer.println(se.getName());
-					writer.println(se.getDate().toString());
-					writer.println(se.getLocation());
+					writer.write(se.getName()+"\n");
+					writer.write(se.getDate().toString()+"\n");
+					writer.write(se.getLocation()+"\n");
 				}
 			}
 		    writer.close();
