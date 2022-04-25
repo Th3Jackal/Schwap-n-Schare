@@ -34,6 +34,9 @@ public class Schedule {
 		data[day].add(e);
 		Collections.sort(data[day]);
 	}
+	public void removeEvent(ScheduleEvent e){
+		data[e.getDate().getDay()].remove(e);
+	}
 	ArrayList<ScheduleEvent> getEvents(int day){
 		if(day < 0 || day > 6) {
 			System.out.print("getEvents(day): day must be within [0,6]\n");
