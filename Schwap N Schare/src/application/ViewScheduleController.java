@@ -30,9 +30,6 @@ public class ViewScheduleController {
 	}
 	
 	public void draw(GraphicsContext gc) {
-		if (Main.schedule1 == null)
-			Main.schedule1 = new Schedule();
-		
 		Main.schedule1.readFromFile(Main.schedule1Name);
 		//width 577
 		//height 304
