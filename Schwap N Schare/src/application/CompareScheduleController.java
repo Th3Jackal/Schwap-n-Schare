@@ -16,7 +16,9 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class CompareScheduleController {
-	
+//initialize variables for comparing schedules
+//load in other users' schedules and display 
+//display code for schedule compare page 
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
