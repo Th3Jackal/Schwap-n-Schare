@@ -30,3 +30,7 @@ Instructions for compilation:
 Functionality:
 
 Resizing has not yet been implemented
+Editing has been implemented but has a few bugs
+Viewing has been implemented but has a few bugs
+View switching has been fully implemented
+UI has been fully developed
