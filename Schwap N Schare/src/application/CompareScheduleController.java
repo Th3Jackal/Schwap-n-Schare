@@ -35,14 +35,24 @@ public class CompareScheduleController {
     private Canvas canvas2;
     
 	public void initialize() {
+		file1.setText(Main.schedule1Name);
+		file2.setText(Main.schedule2Name);
 		gc1 = canvas1.getGraphicsContext2D();
 		gc2 = canvas2.getGraphicsContext2D();
 		draw();
 	}
     
 	public void draw() {
-		Main.schedule1.readFromFile(Main.schedule1Name);
-		Main.schedule2.readFromFile(Main.schedule2Name);
+		try {
+			Main.schedule1.readFromFile(Main.schedule1Name);
+		}catch(Exception e) {
+			return;
+		}
+		try {
+			Main.schedule2.readFromFile(Main.schedule2Name);
+		}catch(Exception e) {
+			return;
+		}
 		double ratio = 227.0/304.0;
 		gc1.setFill(Color.WHITE);
 		gc1.fillRect(0, 0, 577.0, 304.0);
