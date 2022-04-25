@@ -36,7 +36,8 @@ public class Schedule {
 		Collections.sort(data[day]);
 	}
 	public void removeEvent(ScheduleEvent e){
-		data[e.getDate().getDay()].remove(e);
+		int day = e.getDate().getDay();
+		data[day].remove(e);
 	}
 	ArrayList<ScheduleEvent> getEvents(int day){
 		if(day < 0 || day > 6) {
