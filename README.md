@@ -20,6 +20,9 @@ Instructions for compilation:
 5. Download the project. I did it with the bash command
 
   git clone https://github.com/Th3Jackal/Schwap-n-Schare/
+
 6. In Eclipse go to File->Open Projects from File System... then navigate to and select the directory "Schwap N Schare". Click finish.
+
 7. Right click on the project and selectg properties. Then go to Java Build Path and the libraries tab. Click on Modulepath and click the button on the side labeled "Add External Jars...". Navigate to the lib folder of the JavaFX files you downloaded and select all the jars. Click apply and close.
+
 8. Run the project
