@@ -2,7 +2,6 @@ package application;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -37,7 +36,8 @@ public class Schedule {
 	}
 	public void removeEvent(ScheduleEvent e){
 		int day = e.getDate().getDay();
-		data[day].remove(e);
+		if(!data[day].remove(e))
+			System.out.println("Remove failed!");
 	}
 	ArrayList<ScheduleEvent> getEvents(int day){
 		if(day < 0 || day > 6) {
