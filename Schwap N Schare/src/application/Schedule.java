@@ -7,6 +7,12 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Schedule {
+//schedule page functionality
+//size of the schedule page content declared 
+//function to add event into the schedule page with the variables declared
+//function to remove any event 
+//function to write to a file for storing event details 
+//function to read from a file that stores user's event details 
 	private ArrayList<ScheduleEvent>[] data;
 	public Schedule() {
 		data = new ArrayList[7];
