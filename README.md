@@ -26,3 +26,6 @@ Instructions for compilation:
 7. Right click on the project and selectg properties. Then go to Java Build Path and the libraries tab. Click on Modulepath and click the button on the side labeled "Add External Jars...". Navigate to the lib folder of the JavaFX files you downloaded and select all the jars. Click apply and close.
 
 8. Run the project
+
+Functionality:
+Resizing has not yet been implemented
