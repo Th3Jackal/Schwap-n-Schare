@@ -1,6 +1,7 @@
 # Schwap-n-Schare
 
 Group 1
+
 Daniel Albasini, Roshan Vareed, Paige Kim
 
 Instructions for compilation:
