@@ -38,6 +38,7 @@ Profile editing is fully functional. Enter the profile details in settings, hit 
 Resizing has not yet been implemented
 
 Editing has been implemented but has a few bugs
+
 Viewing has been implemented but has a few bugs
   1. Display has trouble clearing itself when new info is added and the files are loaded
 
