@@ -28,4 +28,5 @@ Instructions for compilation:
 8. Run the project
 
 Functionality:
+
 Resizing has not yet been implemented
