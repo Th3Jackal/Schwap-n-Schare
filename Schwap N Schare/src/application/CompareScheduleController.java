@@ -34,6 +34,12 @@ public class CompareScheduleController {
     @FXML
     private Canvas canvas2;
     
+    public void loadFiles() {
+    	Main.schedule1Name = file1.getText();
+    	Main.schedule2Name = file2.getText();
+    	draw();
+    }
+    
 	public void initialize() {
 		file1.setText(Main.schedule1Name);
 		file2.setText(Main.schedule2Name);
