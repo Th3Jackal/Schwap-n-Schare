@@ -10,7 +10,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MainController {
-	
+//when user switches between the pages on the application
+//functions called to switch to a different page and display accordingly
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
