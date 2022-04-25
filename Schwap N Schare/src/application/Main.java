@@ -8,6 +8,8 @@ import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
+//Main class extends the Application package 
+//other users' schedule files are read into the class
 	public static Schedule schedule1,schedule2;
 	public static String schedule1Name = "schedule.txt", schedule2Name="schedule_.txt";
 	@Override
