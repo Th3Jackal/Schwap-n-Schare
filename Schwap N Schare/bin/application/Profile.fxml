@@ -12,18 +12,16 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c2340" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f15a22" height="400.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
       <Circle fill="WHITE" layoutX="75.0" layoutY="74.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label layoutX="40.0" layoutY="149.0" text="Name" textFill="WHITE">
+      <Label fx:id="name" layoutX="13.0" layoutY="197.0" text="Name" textFill="WHITE">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="185.0" text="Username" textFill="WHITE">
+      <Label fx:id="username" layoutX="14.0" layoutY="238.0" text="Username" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="167.0" layoutY="35.0" prefHeight="150.0" prefWidth="200.0" />
-      <TextField layoutX="167.0" layoutY="215.0" prefHeight="150.0" prefWidth="200.0" />
       <Button layoutX="48.0" layoutY="353.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
       <Label layoutX="411.0" layoutY="88.0" text="Biography" textFill="#f15a22">
          <font>
@@ -36,5 +34,7 @@
          </font>
       </Label>
       <Button layoutX="539.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToMain" text="Menu" />
+      <TextArea fx:id="bio" layoutX="167.0" layoutY="36.0" prefHeight="150.0" prefWidth="200.0" />
+      <TextArea fx:id="classes" layoutX="167.0" layoutY="216.0" prefHeight="150.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

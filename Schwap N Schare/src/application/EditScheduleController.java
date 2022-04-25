@@ -52,6 +52,7 @@ public class EditScheduleController {
     	Main.schedule1.removeEvent(se);
     	Main.schedule1.writeToFile(Main.schedule1Name);
     }
+    
 	public void switchToMain(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();

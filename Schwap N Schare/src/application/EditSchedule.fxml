@@ -8,38 +8,38 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditScheduleController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c2340" height="400.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
-      <Button layoutX="540.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToMain" text="Menu" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c2340" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Button layoutX="527.0" layoutY="354.0" mnemonicParsing="false" onAction="#switchToMain" text="Menu" />
       <Label layoutX="211.0" layoutY="14.0" text="Edit Schedule" textFill="#f15a22">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="dayText" layoutX="316.0" layoutY="172.0" />
-      <TextField fx:id="timeText" layoutX="130.0" layoutY="172.0" />
-      <TextField fx:id="locationText" layoutX="226.0" layoutY="247.0" />
-      <Label layoutX="387.0" layoutY="203.0" prefHeight="25.0" prefWidth="30.0" text="Day" textFill="#f15a22">
+      <TextField fx:id="dayText" layoutX="326.0" layoutY="169.0" />
+      <TextField fx:id="timeText" layoutX="89.0" layoutY="169.0" />
+      <TextField fx:id="locationText" layoutX="207.0" layoutY="249.0" />
+      <Label layoutX="404.0" layoutY="204.0" prefHeight="25.0" prefWidth="30.0" text="Day" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="206.0" text="Time" textFill="#f15a22">
+      <Label layoutX="166.0" layoutY="206.0" text="Time" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="277.0" layoutY="280.0" text="Location" textFill="#f15a22">
+      <Label layoutX="272.0" layoutY="280.0" text="Location" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Button layoutX="260.0" layoutY="317.0" mnemonicParsing="false" onAction="#addActivity" text="Add Activity" />
-      <Button layoutX="250.0" layoutY="354.0" mnemonicParsing="false" onAction="#removeActivity" text="Remove Activity" />
+      <Button layoutX="250.0" layoutY="316.0" mnemonicParsing="false" onAction="#addActivity" text="Add Activity" />
+      <Button layoutX="237.0" layoutY="354.0" mnemonicParsing="false" onAction="#removeActivity" text="Remove Activity" />
       <Label layoutX="276.0" layoutY="138.0" text="Activity" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="nameText" layoutX="226.0" layoutY="107.0" />
+      <TextField fx:id="nameText" layoutX="207.0" layoutY="107.0" />
    </children>
 </AnchorPane>
