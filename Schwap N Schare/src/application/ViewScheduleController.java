@@ -33,7 +33,7 @@ public class ViewScheduleController {
 		if (Main.schedule1 == null)
 			Main.schedule1 = new Schedule();
 		
-		Main.schedule1.readFromFile("schedule.txt");
+		Main.schedule1.readFromFile(Main.schedule1Name);
 		//width 577
 		//height 304
 		//column width 82.4285714286
