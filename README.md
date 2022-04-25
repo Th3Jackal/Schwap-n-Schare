@@ -1,5 +1,8 @@
 # Schwap-n-Schare
 
+Group 1
+Daniel Albasini, Roshan Vareed, Paige Kim
+
 Instructions for compilation:
 1. Make sure you have the latest version of jre and jdk. Here is the one I have:
 
@@ -29,12 +32,14 @@ Instructions for compilation:
 
 Functionality:
 
+Profile editing is fully functional. Enter the profile details in settings, hit the applicable save button, and the change will be reflected in the profile.
+
 Resizing has not yet been implemented
 
 Editing has been implemented but has a few bugs
-
 Viewing has been implemented but has a few bugs
+  1. Display has trouble clearing itself when new info is added and the files are loaded
 
-View switching has been fully implemented
+View switching has been fully implemented. Click on desired function to move to that scene and use the menu button on the scene to return to the menu.
 
 UI has been fully developed
