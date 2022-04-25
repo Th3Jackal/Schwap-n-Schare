@@ -24,6 +24,8 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
+		schedule1 = new Schedule();
+		schedule1.readFromFile(Main.schedule1Name);
 		launch(args);
 	}
 }
