@@ -14,7 +14,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class ViewScheduleController {
-	
+//layout design code for the schedule view page 
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
