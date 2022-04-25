@@ -10,7 +10,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class ProfileController {
-	
+//initialized profile page variables
+//function declared to for logout feature 
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
