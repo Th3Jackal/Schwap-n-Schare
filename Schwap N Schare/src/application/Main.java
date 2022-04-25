@@ -9,7 +9,7 @@ import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
 	public static Schedule schedule1,schedule2;
-	public static String schedule1Name = "schedule.txt", schedule2Name="";
+	public static String schedule1Name = "schedule.txt", schedule2Name="schedule2.txt";
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -26,6 +26,8 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		schedule1 = new Schedule();
 		schedule1.readFromFile(Main.schedule1Name);
+		schedule2 = new Schedule();
+		schedule2.readFromFile(Main.schedule1Name);
 		launch(args);
 	}
 }
