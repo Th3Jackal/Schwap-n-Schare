@@ -3,6 +3,7 @@ package application;
 import java.util.Scanner;
 
 public class ScheduleDate {
+//variables for schedule page contents declared 
 	private int day,hour,minute,second;
 	public static String[] days = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 	public ScheduleDate(int day, int hour, int minute, int second) {
