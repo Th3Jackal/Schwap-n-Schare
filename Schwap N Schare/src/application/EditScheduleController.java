@@ -32,7 +32,14 @@ public class EditScheduleController {
     @FXML
     void addActivity(ActionEvent event) {
     	ScheduleDate sd = new ScheduleDate();
-    	sd.parseString(dayText.getText(),timeText.getText());
+    	try {
+    		sd.parseString(dayText.getText(),timeText.getText());
+    	}catch(NumberFormatException e) {
+    		System.err.println("Failed to read time");
+    		return;
+    	}catch(Exception e) {
+    		e.printStackTrace();
+    	}
     	ScheduleEvent se = new ScheduleEvent(nameText.getText(), sd, locationText.getText());
     	Main.schedule1.addEvent(se);
     }
@@ -40,7 +47,17 @@ public class EditScheduleController {
     @FXML
     void removeActivity(ActionEvent event) {
     	ScheduleDate sd = new ScheduleDate();
-    	sd.parseString(dayText.getText(),timeText.getText());
+    	try {
+    		sd.parseString(dayText.getText(),timeText.getText());
+    	}catch(NumberFormatException e) {
+    		System.err.println("Failed to read time");
+    		return;
+    	}catch(NullPointerException e) {
+    		System.err.println("Failed to read day");
+    		return;
+    	}catch(Exception e) {
+    		e.printStackTrace();
+    	}
     	ScheduleEvent se = new ScheduleEvent(nameText.getText(), sd, locationText.getText());
     	Main.schedule1.removeEvent(se);
     }

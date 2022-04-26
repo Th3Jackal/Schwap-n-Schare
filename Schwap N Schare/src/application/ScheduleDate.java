@@ -45,7 +45,7 @@ public class ScheduleDate {
 		sc.close();
 		parseString(day_t,time);
 	}
-	public void parseString(String day_t, String s2) {
+	public void parseString(String day_t, String s2) throws NumberFormatException, NullPointerException{
 		String[] time = s2.split(":");
 		this.hour=Integer.parseInt(time[0]);
 		this.minute = (time.length >= 2) ? Integer.parseInt(time[1]) : 0;
@@ -58,15 +58,14 @@ public class ScheduleDate {
 			if(day_t.length() >= 2)
 				day = (day_t.charAt(1) == 'h' || day_t.charAt(1) == 'r') ? 4 : 2;
 			else {
-				System.out.println("Failed to read day");
-				return;
+				throw new NullPointerException();
 			}
 			break;
 		case 's':
 			if(day_t.length() >= 2)
 				day = (day_t.charAt(1) == 'u') ? 0 : 6;
 			else {
-				System.out.println("Failed to read day");
+				System.err.println("Failed to read day");
 				return;
 			}
 			break;
@@ -83,7 +82,7 @@ public class ScheduleDate {
 			day = 4;
 			break;
 		default:
-			System.out.println("Failed to read day");
+			System.err.println("Failed to read day");
 		}
 	}
 	public String toString() {	

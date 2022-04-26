@@ -47,34 +47,6 @@ public class Schedule {
 		ScheduleEvent e = new ScheduleEvent(name,date,location);
 		addEvent(e);
 	}
-	private int binarySearch(ScheduleEvent e, int day, int start, int end) {
-		if(end >= start) {
-			int mid = (end+start)/2;
-			switch(e.compareTo(data[day].get(mid))) {
-				case 0:
-					if (ScheduleEvent.testEquality(data[day].get(mid),e))
-						return mid;
-					break;
-				case 1:
-					return binarySearch(e,day,start,mid-1);
-				case -1:
-					return binarySearch(e,day,mid+1,end);
-			}
-		}
-		return -1;
-	}
-	
-	private boolean contains(ScheduleEvent e, int day) {
-		return binarySearch(e,day,0,data[day].size()-1) != -1;
-	}
-	private boolean remove(ScheduleEvent e, int day) {
-		int index = binarySearch(e,day,0,data[day].size()-1);
-		if (index != -1) {
-			data[day].remove(index);
-			return true;
-		}
-		return false;
-	}
 	public void addEvent(ScheduleEvent e) {
 		readFromFile();
 		int day = e.getDate().getDay();
@@ -91,13 +63,40 @@ public class Schedule {
 	public void removeEvent(ScheduleEvent e){
 		int day = e.getDate().getDay();
 		if(!remove(e,day))
-			System.out.println("Remove failed!");
+			System.err.println("Remove failed: could not find event");
 		else
 			writeToFile();
 	}
+	private int binarySearch(ScheduleEvent e, int day, int start, int end) {
+		if(end >= start) {
+			int mid = (end+start)/2;
+			switch(e.compareTo(data[day].get(mid))) {
+				case 0:
+					if (ScheduleEvent.testEquality(data[day].get(mid),e))
+						return mid;
+					break;
+				case 1:
+					return binarySearch(e,day,start,mid-1);
+				case -1:
+					return binarySearch(e,day,mid+1,end);
+			}
+		}
+		return -1;
+	}
+	private boolean contains(ScheduleEvent e, int day) {
+		return binarySearch(e,day,0,data[day].size()-1) != -1;
+	}
+	private boolean remove(ScheduleEvent e, int day) {
+		int index = binarySearch(e,day,0,data[day].size()-1);
+		if (index != -1) {
+			data[day].remove(index);
+			return true;
+		}
+		return false;
+	}
 	public ArrayList<ScheduleEvent> getEvents(int day){
 		if(day < 0 || day > 6) {
-			System.out.print("getEvents(day): day must be within [0,6]\n");
+			System.err.println("getEvents(day): day must be within [0,6]");
 			System.exit(-53);
 		}
 		return data[day];

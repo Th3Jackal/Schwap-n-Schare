@@ -52,12 +52,12 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label layoutX="15.0" layoutY="303.0" text="Edit Schedule" textFill="#f15a22">
+      <Label layoutX="46.0" layoutY="303.0" text="Edit" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="115.0" layoutY="303.0" text="Compare Schedule" textFill="#f15a22">
+      <Label layoutX="144.0" layoutY="303.0" text="Compare" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
@@ -77,7 +77,7 @@
             <Image url="@../university-of-texas-at-san-antonio-logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="252.0" layoutY="303.0" text="View Schedule" textFill="#f15a22">
+      <Label layoutX="278.0" layoutY="303.0" text="View" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
@@ -91,5 +91,20 @@
             </ImageView>
          </graphic>
       </Button>
+      <Label layoutX="27.0" layoutY="318.0" text="Schedule" textFill="#f15a22">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="144.0" layoutY="318.0" text="Schedule" textFill="#f15a22">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="266.0" layoutY="318.0" text="Schedule" textFill="#f15a22">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
