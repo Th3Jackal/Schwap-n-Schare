@@ -9,6 +9,7 @@ public class ScheduleDate {
 	public ScheduleDate(int day, int hour, int minute, int second) {
 		setScheduleDate(day,hour,minute,second);
 	}
+	public ScheduleDate() {}
 	
 	public void setScheduleDate(int day, int hour, int minute, int second) {
 		this.day=day;

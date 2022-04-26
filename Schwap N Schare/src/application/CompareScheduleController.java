@@ -37,14 +37,14 @@ public class CompareScheduleController {
     private Canvas canvas2;
     
     public void loadFiles() {
-    	Main.schedule1Name = file1.getText();
-    	Main.schedule2Name = file2.getText();
+    	Main.schedule1.setFilename(file1.getText());
+    	Main.schedule2.setFilename(file2.getText());
     	draw();
     }
     
 	public void initialize() {
-		file1.setText(Main.schedule1Name);
-		file2.setText(Main.schedule2Name);
+		file1.setText(Main.schedule1.getFilename());
+		file2.setText(Main.schedule2.getFilename());
 		gc1 = canvas1.getGraphicsContext2D();
 		gc2 = canvas2.getGraphicsContext2D();
 		draw();
@@ -52,12 +52,12 @@ public class CompareScheduleController {
     
 	public void draw() {
 		try {
-			Main.schedule1.readFromFile(Main.schedule1Name);
+			Main.schedule1.readFromFile(Main.schedule1.getFilename());
 		}catch(Exception e) {
 			return;
 		}
 		try {
-			Main.schedule2.readFromFile(Main.schedule2Name);
+			Main.schedule2.readFromFile(Main.schedule2.getFilename());
 		}catch(Exception e) {
 			return;
 		}

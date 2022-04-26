@@ -41,7 +41,7 @@ public class EditScheduleController {
     	sd.parseString(dayText.getText()+" "+timeText.getText());
     	ScheduleEvent se = new ScheduleEvent(nameText.getText(), sd, locationText.getText());
     	Main.schedule1.addEvent(se);
-    	Main.schedule1.writeToFile(Main.schedule1Name);
+    	Main.schedule1.writeToFile(Main.schedule1.getFilename());
     }
 
     @FXML
@@ -50,7 +50,7 @@ public class EditScheduleController {
     	sd.parseString(dayText.getText()+" "+timeText.getText());
     	ScheduleEvent se = new ScheduleEvent(nameText.getText(), sd, locationText.getText());
     	Main.schedule1.removeEvent(se);
-    	Main.schedule1.writeToFile(Main.schedule1Name);
+    	Main.schedule1.writeToFile(Main.schedule1.getFilename());
     }
     
 	public void switchToMain(ActionEvent event) throws IOException {

@@ -14,8 +14,19 @@ public class Schedule {
 //function to write to a file for storing event details 
 //function to read from a file that stores user's event details 
 	private ArrayList<ScheduleEvent>[] data;
+	private String filename;
 	public Schedule() {
 		allocateData();
+	}
+	public Schedule(String filename) {
+		this.filename=filename;
+		allocateData();
+	}
+	public void setFilename(String filename) {
+		this.filename=filename;
+	}
+	public String getFilename() {
+		return filename;
 	}
 	private void allocateData() {
 		data = new ArrayList[7];
@@ -25,23 +36,26 @@ public class Schedule {
 	public void addEvent(String name,int day, int hour, int minute, int second,String location) {
 		ScheduleDate date = new ScheduleDate(day,hour,minute,second);
 		ScheduleEvent e = new ScheduleEvent(name,date,location);
-		data[day].add(e);
-		Collections.sort(data[day]);
+		addEvent(e);
 	}
 	public void addEvent(String name,ScheduleDate date,String location) {
 		ScheduleEvent e = new ScheduleEvent(name,date,location);
+		addEvent(e);
+	}
+	public void addEvent(ScheduleEvent e) {
+		readFromFile(filename);
 		int day = e.getDate().getDay();
-		data[day].add(e);
-		Collections.sort(data[day]);
+		System.out.println(data[day].indexOf(e));
+		if(data[day].indexOf(e) == -1) {
+			System.out.println(data[day].indexOf(e));
+			data[day].add(e);
+			Collections.sort(data[day]);
+		}
+		writeToFile(filename);
 	}
 	private void addEvent_concurrent(ScheduleEvent e) {
 		int day = e.getDate().getDay();
 		data[day].add(e);
-	}
-	public void addEvent(ScheduleEvent e) {
-		int day = e.getDate().getDay();
-		data[day].add(e);
-		Collections.sort(data[day]);
 	}
 	public void removeEvent(ScheduleEvent e){
 		int day = e.getDate().getDay();
@@ -86,7 +100,7 @@ public class Schedule {
 				line1=sc.nextLine();
 				line2=sc.nextLine();
 				line3=sc.nextLine();
-				ScheduleDate sd = new ScheduleDate(0,0,0,0);
+				ScheduleDate sd = new ScheduleDate();
 				sd.parseString(line2);
 				ScheduleEvent se = new ScheduleEvent(line1,sd,line3);
 				addEvent_concurrent(se);

@@ -30,7 +30,7 @@ public class ViewScheduleController {
 	}
 	
 	public void draw(GraphicsContext gc) {
-		Main.schedule1.readFromFile(Main.schedule1Name);
+		Main.schedule1.readFromFile(Main.schedule1.getFilename());
 		//width 577
 		//height 304
 		//column width 82.4285714286

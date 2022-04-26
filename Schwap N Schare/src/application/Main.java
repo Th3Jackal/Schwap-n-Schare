@@ -11,7 +11,6 @@ public class Main extends Application {
 //Main class extends the Application package 
 //other users' schedule files are read into the class
 	public static Schedule schedule1,schedule2;
-	public static String schedule1Name = "schedule.txt", schedule2Name="schedule_.txt";
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -27,13 +26,13 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
-		schedule1 = new Schedule();
+		schedule1 = new Schedule("schedule.txt");
 		try {
-		schedule1.readFromFile(Main.schedule1Name);
+		schedule1.readFromFile(schedule1.getFilename());
 		}catch(Exception e) {}
-		schedule2 = new Schedule();
+		schedule2 = new Schedule("schedule_.txt");
 		try {
-			schedule2.readFromFile(Main.schedule1Name);
+			schedule2.readFromFile(schedule2.getFilename());
 		}catch(Exception e) {}
 		
 		launch(args);
