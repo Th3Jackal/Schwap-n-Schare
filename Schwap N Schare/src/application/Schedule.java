@@ -54,7 +54,7 @@ public class Schedule {
 	}
 	public void writeToFile(String filename) {
 		try {
-			File file = new File(System.getProperty("user.dir") +"/"+ filename);
+			File file = new File(System.getProperty("user.dir") +"/src/"+ filename);
 			FileWriter writer = new FileWriter(file);
 			for(int i=0; i<7; i++) {
 				for(ScheduleEvent se : getEvents(i)) {
@@ -72,7 +72,7 @@ public class Schedule {
 		Scanner sc;
 		File file;
 		try {
-			file = new File(System.getProperty("user.dir") +"/"+ filename);
+			file = new File(System.getProperty("user.dir") +"/src/"+ filename);
 			sc = new Scanner(file);
 			
 			while(sc.hasNextLine()) {
