@@ -35,12 +35,9 @@ Functionality:
 
 Profile editing is fully functional. Enter the profile details in settings, hit the applicable save button, and the change will be reflected in the profile.
 
-Resizing has not yet been implemented
+Editing has been implemented. Fill in the fields with the desired information and click the add activity button to add it to the schedule or press remove activity to remove it from the schedule.
 
-Editing has been implemented but has a few bugs
-
-Viewing has been implemented but has a few bugs
-  1. Display has trouble clearing itself when new info is added and the files are loaded
+Viewing has been implemented
 
 View switching has been fully implemented. Click on desired function to move to that scene and use the menu button on the scene to return to the menu.
 
