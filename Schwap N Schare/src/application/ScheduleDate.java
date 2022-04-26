@@ -43,7 +43,7 @@ public class ScheduleDate {
 		String[] time = sc.next().split(":");
 		this.hour=Integer.parseInt(time[0]);
 		this.minute=Integer.parseInt(time[1]);
-		this.second=Integer.parseInt(time[2]);
+		this.second = (time.length == 3) ? Integer.parseInt(time[2]) : 0;
 		
 		if(day_t.equals( "Sunday")) {
 			day=0;
