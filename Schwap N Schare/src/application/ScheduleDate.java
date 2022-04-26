@@ -41,7 +41,12 @@ public class ScheduleDate {
 	public void parseString(String s) {
 		Scanner sc = new Scanner(s);
 		String day_t = sc.next();
-		String[] time = sc.next().split(":");
+		String time = sc.next();
+		sc.close();
+		parseString(day_t,time);
+	}
+	public void parseString(String day_t, String s2) {
+		String[] time = s2.split(":");
 		this.hour=Integer.parseInt(time[0]);
 		this.minute = (time.length >= 2) ? Integer.parseInt(time[1]) : 0;
 		this.second = (time.length >= 3) ? Integer.parseInt(time[2]) : 0;
@@ -49,21 +54,19 @@ public class ScheduleDate {
 		char c1 = day_t.charAt(0);
 		
 		switch(c1) {
+		case 't':
+			if(day_t.length() >= 2)
+				day = (day_t.charAt(1) == 'h' || day_t.charAt(1) == 'r') ? 4 : 2;
+			else {
+				System.out.println("Failed to read day");
+				return;
+			}
+			break;
 		case 's':
 			if(day_t.length() >= 2)
 				day = (day_t.charAt(1) == 'u') ? 0 : 6;
 			else {
 				System.out.println("Failed to read day");
-				sc.close();
-				return;
-			}
-			break;
-		case 't':
-			if(day_t.length() >= 2)
-				day = (day_t.charAt(1) == 'u') ? 2 : 4;
-			else {
-				System.out.println("Failed to read day");
-				sc.close();
 				return;
 			}
 			break;
@@ -82,7 +85,6 @@ public class ScheduleDate {
 		default:
 			System.out.println("Failed to read day");
 		}
-		sc.close();
 	}
 	public String toString() {	
 		return days[day]+" "+String.format("%02d", hour)+":"+String.format("%02d", minute)+":"+String.format("%02d", second);
@@ -93,6 +95,8 @@ public class ScheduleDate {
 	public int compareTo(ScheduleDate date) {
 		return Integer.compare(this.getRealTime(),date.getRealTime());
 	}
-	
+	public static boolean testEquality(ScheduleDate a, ScheduleDate b) {
+		return a.day == b.day && a.hour == b.hour && a.minute == b.minute && a.second == b.second;
+	}
 	
 }

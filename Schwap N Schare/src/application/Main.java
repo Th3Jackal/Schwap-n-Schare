@@ -27,14 +27,7 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		schedule1 = new Schedule("schedule.txt");
-		try {
-		schedule1.readFromFile(schedule1.getFilename());
-		}catch(Exception e) {}
 		schedule2 = new Schedule("schedule_.txt");
-		try {
-			schedule2.readFromFile(schedule2.getFilename());
-		}catch(Exception e) {}
-		
 		launch(args);
 	}
 }

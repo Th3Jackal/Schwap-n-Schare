@@ -21,6 +21,11 @@ public class Schedule {
 	public Schedule(String filename) {
 		this.filename=filename;
 		allocateData();
+		try {
+			readFromFile();
+		}catch(Exception e) {
+			
+		}
 	}
 	public void setFilename(String filename) {
 		this.filename=filename;
@@ -42,16 +47,42 @@ public class Schedule {
 		ScheduleEvent e = new ScheduleEvent(name,date,location);
 		addEvent(e);
 	}
+	private int binarySearch(ScheduleEvent e, int day, int start, int end) {
+		if(end >= start) {
+			int mid = (end+start)/2;
+			switch(e.compareTo(data[day].get(mid))) {
+				case 0:
+					if (ScheduleEvent.testEquality(data[day].get(mid),e))
+						return mid;
+					break;
+				case 1:
+					return binarySearch(e,day,start,mid-1);
+				case -1:
+					return binarySearch(e,day,mid+1,end);
+			}
+		}
+		return -1;
+	}
+	
+	private boolean contains(ScheduleEvent e, int day) {
+		return binarySearch(e,day,0,data[day].size()-1) != -1;
+	}
+	private boolean remove(ScheduleEvent e, int day) {
+		int index = binarySearch(e,day,0,data[day].size()-1);
+		if (index != -1) {
+			data[day].remove(index);
+			return true;
+		}
+		return false;
+	}
 	public void addEvent(ScheduleEvent e) {
-		readFromFile(filename);
+		readFromFile();
 		int day = e.getDate().getDay();
-		System.out.println(data[day].indexOf(e));
-		if(data[day].indexOf(e) == -1) {
-			System.out.println(data[day].indexOf(e));
+		if(!contains(e,day)) {
 			data[day].add(e);
 			Collections.sort(data[day]);
 		}
-		writeToFile(filename);
+		writeToFile();
 	}
 	private void addEvent_concurrent(ScheduleEvent e) {
 		int day = e.getDate().getDay();
@@ -59,17 +90,19 @@ public class Schedule {
 	}
 	public void removeEvent(ScheduleEvent e){
 		int day = e.getDate().getDay();
-		if(!data[day].remove(e))
+		if(!remove(e,day))
 			System.out.println("Remove failed!");
+		else
+			writeToFile();
 	}
-	ArrayList<ScheduleEvent> getEvents(int day){
+	public ArrayList<ScheduleEvent> getEvents(int day){
 		if(day < 0 || day > 6) {
 			System.out.print("getEvents(day): day must be within [0,6]\n");
 			System.exit(-53);
 		}
 		return data[day];
 	}
-	public void writeToFile(String filename) {
+	public void writeToFile() {
 		try {
 			File file = new File(System.getProperty("user.dir") +"/src/"+ filename);
 			FileWriter writer = new FileWriter(file);
@@ -85,7 +118,7 @@ public class Schedule {
 			e.printStackTrace();
 		}
 	}
-	public void readFromFile(String filename) {
+	public void readFromFile() {
 		//clear array
 		allocateData();
 		

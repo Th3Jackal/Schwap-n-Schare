@@ -30,7 +30,7 @@ public class ViewScheduleController {
 	}
 	
 	public void draw(GraphicsContext gc) {
-		Main.schedule1.readFromFile(Main.schedule1.getFilename());
+		Main.schedule1.readFromFile();
 		//width 577
 		//height 304
 		//column width 82.4285714286
@@ -61,7 +61,7 @@ public class ViewScheduleController {
 	}
 	
 	
-public void switchToMain(ActionEvent event) throws IOException {
+	public void switchToMain(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);

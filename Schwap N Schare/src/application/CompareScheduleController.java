@@ -52,12 +52,12 @@ public class CompareScheduleController {
     
 	public void draw() {
 		try {
-			Main.schedule1.readFromFile(Main.schedule1.getFilename());
+			Main.schedule1.readFromFile();
 		}catch(Exception e) {
 			return;
 		}
 		try {
-			Main.schedule2.readFromFile(Main.schedule2.getFilename());
+			Main.schedule2.readFromFile();
 		}catch(Exception e) {
 			return;
 		}
