@@ -15,6 +15,9 @@ public class Schedule {
 //function to read from a file that stores user's event details 
 	private ArrayList<ScheduleEvent>[] data;
 	public Schedule() {
+		allocateData();
+	}
+	private void allocateData() {
 		data = new ArrayList[7];
 		for(int i=0; i <7; i++)
 			data[i] = new ArrayList<ScheduleEvent>();
@@ -69,6 +72,9 @@ public class Schedule {
 		}
 	}
 	public void readFromFile(String filename) {
+		//clear array
+		allocateData();
+		
 		Scanner sc;
 		File file;
 		try {
