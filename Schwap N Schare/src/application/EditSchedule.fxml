@@ -19,24 +19,24 @@
       <TextField fx:id="timeText" layoutX="105.0" layoutY="145.0" prefHeight="25.0" prefWidth="467.0" />
       <TextField fx:id="locationText" layoutX="105.0" layoutY="181.0" prefHeight="25.0" prefWidth="467.0" />
       <TextField fx:id="nameText" layoutX="105.0" layoutY="217.0" prefHeight="25.0" prefWidth="467.0" />
-      <Label layoutX="20.0" layoutY="110.0" prefHeight="25.0" prefWidth="30.0" text="Day" textFill="#f15a22">
+      <Label layoutX="20.0" layoutY="110.0" prefHeight="25.0" prefWidth="30.0" text="Day:" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="20.0" layoutY="148.0" text="Time" textFill="#f15a22">
+      <Label layoutX="20.0" layoutY="148.0" text="Time:" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="20.0" layoutY="184.0" text="Location" textFill="#f15a22">
+      <Label layoutX="20.0" layoutY="184.0" text="Location:" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
       <Button layoutX="181.0" layoutY="272.0" mnemonicParsing="false" onAction="#addActivity" text="Add Activity" />
       <Button layoutX="294.0" layoutY="272.0" mnemonicParsing="false" onAction="#removeActivity" text="Remove Activity" />
-      <Label layoutX="21.0" layoutY="220.0" text="Activity" textFill="#f15a22">
+      <Label layoutX="21.0" layoutY="220.0" text="Activity:" textFill="#f15a22">
          <font>
             <Font size="15.0" />
          </font>
