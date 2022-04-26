@@ -42,24 +42,43 @@ public class ScheduleDate {
 		String day_t = sc.next();
 		String[] time = sc.next().split(":");
 		this.hour=Integer.parseInt(time[0]);
-		this.minute=Integer.parseInt(time[1]);
-		this.second = (time.length == 3) ? Integer.parseInt(time[2]) : 0;
+		this.minute = (time.length >= 2) ? Integer.parseInt(time[1]) : 0;
+		this.second = (time.length >= 3) ? Integer.parseInt(time[2]) : 0;
+		day_t = day_t.toLowerCase();
+		char c1 = day_t.charAt(0);
 		
-		if(day_t.equals( "Sunday")) {
-			day=0;
-		}else if(day_t.equals("Monday")) {
-			day=1;
-		}else if(day_t.equals("Tuesday")) {
-			day=2;
-		}else if(day_t.equals("Wednesday")) {
-			day=3;
-		}else if(day_t.equals("Thursday")) {
-			day=4;
-		}else if(day_t.equals("Friday")) {
-			day=5;
-		}else if(day_t.equals("Saturday")) {
-			day=6;
-		}else {
+		switch(c1) {
+		case 's':
+			if(day_t.length() >= 2)
+				day = (day_t.charAt(1) == 'u') ? 0 : 6;
+			else {
+				System.out.println("Failed to read day");
+				sc.close();
+				return;
+			}
+			break;
+		case 't':
+			if(day_t.length() >= 2)
+				day = (day_t.charAt(1) == 'u') ? 2 : 4;
+			else {
+				System.out.println("Failed to read day");
+				sc.close();
+				return;
+			}
+			break;
+		case 'm':
+			day = 1;
+			break;
+		case 'w':
+			day = 3;
+			break;
+		case 'f':
+			day = 5;
+			break;
+		case 'r':
+			day = 4;
+			break;
+		default:
 			System.out.println("Failed to read day");
 		}
 		sc.close();
